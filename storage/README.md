@@ -5,9 +5,9 @@
 ```shell
 iex -S mix
 {:ok, storage} = Server.start_link()
-Server.put(:store, "hours for the meeting", 18)
-Server.get(:store, "hours for the meeting")
-Server.delete(:store, "hours for the meeting")
-Server.stop(:store)
+Server.put(storage, "hours for the meeting", 18)
+Server.get(storage, "hours for the meeting")
+Server.delete(storage, "hours for the meeting")
+Server.stop(storage)
 
 ```
