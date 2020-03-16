@@ -13,7 +13,7 @@ defmodule Composition do
     end
   end
 
-  def isd do
-    fn val -> compose([&inc/1, &square/1, &double/1]).(val) end
+  def isd(val) do
+    compose([&inc/1, &square/1, &double/1]).(val)
   end
 end
