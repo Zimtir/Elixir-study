@@ -43,4 +43,10 @@ defmodule CalculatorTest do
     assert Calculator.multiple(0, 0) == 0
     assert Calculator.multiple(-1, 2) == -2
   end
+
+  test "square of the integer number" do
+    assert Calculator.square(2) == 4
+    assert Calculator.square(3) == 9
+    assert Calculator.square(4) == 16
+  end
 end

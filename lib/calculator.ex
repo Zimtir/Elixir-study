@@ -88,22 +88,17 @@ defmodule Calculator do
   def multiple(a, b) do
     a * b
   end
+
+  @doc """
+  square
+
+  ## Examples
+
+      iex> Calculator.square(3)
+      9
+
+  """
+  def square(a) do
+    a * a
+  end
 end
-
-Calculator.sum(2, 2)
-|> IO.puts()
-
-Calculator.sum(:list, [0, 1, 2, 3, 4, 5])
-|> IO.puts()
-
-Calculator.difference(2, 2)
-|> IO.puts()
-
-Calculator.difference(:list, [0, 1, 2, 3, 4, 5])
-|> IO.puts()
-
-Calculator.multiple(3, 5)
-|> IO.puts()
-
-Calculator.multiple(:list, [0, 1, 2, 3, 4, 5])
-|> IO.puts()
