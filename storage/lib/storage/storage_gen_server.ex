@@ -1,4 +1,4 @@
-defmodule Storage.GenServer do
+defmodule Server do
   use GenServer
 
   # Client interface
@@ -41,6 +41,6 @@ defmodule Storage.GenServer do
 
   def handle_cast({:put, key, value}, state) do
     new_state = Map.put(state, key, value)
-    {:noreply, new_state}
+    {:reply, value, new_state}
   end
 end

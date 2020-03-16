@@ -4,10 +4,10 @@
 
 ```shell
 iex -S mix
-{:ok, storage} = Storage.GenServer.start_link()
-Storage.GenServer.put(bucket, "hours for the meeting", 18)
-Storage.GenServer.get(bucket, "hours for the meeting")
-Storage.GenServer.delete(storage, "hours for the meeting")
-Storage.GenServer.stop(storage)
+{:ok, storage} = Server.start_link()
+Server.put(bucket, "hours for the meeting", 18)
+Server.get(bucket, "hours for the meeting")
+Server.delete(storage, "hours for the meeting")
+Server.stop(storage)
 
 ```

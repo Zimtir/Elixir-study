@@ -9,7 +9,7 @@ defmodule Storage.Supervisor do
     children = [
       # in the examples, they use the module as `name`, but I think it's
       # confusing at the moment
-      {Storage.GenServer, name: :store}
+      {Server, name: :store}
     ]
 
     # :one_for_one means that if a child dies, it will be the only one restarted.
